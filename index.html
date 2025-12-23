@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блакитна Хвиля — Кав'ярня та затишок</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Блакитна Хвиля</div>
+            <ul>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#reviews">Відгуки</a></li>
+                <li><a href="#location">Локація</a></li>
+                <li><a href="#order" class="btn-order">Замовити онлайн</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Блакитна Хвиля</h1>
+            <p>Смак, що надихає. Атмосфера, що заспокоює.</p>
+            <a href="#menu" class="cta-button">Відкрити меню</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <h2>Наша історія</h2>
+                <p>Все почалося з любові до моря та ідеального еспресо. Засновник кав'ярні Олександр, подорожуючи узбережжям Португалії, вирішив привезти часточку цієї свободи в наше місто.</p>
+                <p><strong>"Блакитна хвиля"</strong> — це не просто бізнес. Це команда професійних бариста, які знають про каву все. Наш сервіс — це посмішка та щирість у кожній деталі.</p>
+            </div>
+            <div class="about-images">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800" alt="Атмосфера">
+                <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=800" alt="Бариста за роботою">
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Наше Меню</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="showCategory('coffee')">Кава</button>
+                <button class="tab-btn" onclick="showCategory('desserts')">Десерти</button>
+                <button class="tab-btn" onclick="showCategory('breakfasts')">Сніданки</button>
+            </div>
+
+            <div id="coffee" class="menu-category active">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500" alt="Еспресо">
+                        <div class="item-info">
+                            <h3>Еспресо</h3>
+                            <p>Класичний міцний напій, 30 мл чистої енергії.</p>
+                            <div class="price-row"><span>45 грн</span> <button onclick="selectForOrder('Еспресо', 45)">Обрати</button></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500" alt="Капучино">
+                        <div class="item-info">
+                            <h3>Капучино</h3>
+                            <p>Еспресо, гаряче молоко та шовковиста пінка.</p>
+                            <div class="price-row"><span>65 грн</span> <button onclick="selectForOrder('Капучино', 65)">Обрати</button></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500" alt="Лате">
+                        <div class="item-info">
+                            <h3>Лате</h3>
+                            <p>Ніжне поєднання великої кількості молока та кави.</p>
+                            <div class="price-row"><span>75 грн</span> <button onclick="selectForOrder('Лате', 75)">Обрати</button></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=500" alt="Флет Вайт">
+                        <div class="item-info">
+                            <h3>Флет Вайт</h3>
+                            <p>Подвійне еспресо з тонким шаром гарячого молока.</p>
+                            <div class="price-row"><span>80 грн</span> <button onclick="selectForOrder('Флет Вайт', 80)">Обрати</button></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=500" alt="Айс Лате">
+                        <div class="item-info">
+                            <h3>Айс Лате</h3>
+                            <p>Кава з льодом та молоком для спекотного дня.</p>
+                            <div class="price-row"><span>85 грн</span> <button onclick="selectForOrder('Айс Лате', 85)">Обрати</button></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500" alt="Раф">
+                        <div class="item-info">
+                            <h3>Раф Класичний</h3>
+                            <p>Збиті вершки з ванільним цукром та еспресо.</p>
+                            <div class="price-row"><span>90 грн</span> <button onclick="selectForOrder('Раф', 90)">Обрати</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="desserts" class="menu-category">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500" alt="Чізкейк">
+                        <div class="item-info"><h3>Чізкейк Нью-Йорк</h3><p>Класичний вершковий смак.</p>
+                        <div class="price-row"><span>110 грн</span> <button onclick="selectForOrder('Чізкейк', 110)">Обрати</button></div></div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" alt="Круасан">
+                        <div class="item-info"><h3>Круасан з мигдалем</h3><p>Хрусткий круасан з кремом.</p>
+                        <div class="price-row"><span>65 грн</span> <button onclick="selectForOrder('Круасан', 65)">Обрати</button></div></div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Брауні">
+                        <div class="item-info"><h3>Брауні</h3><p>Насичений шоколадний десерт.</p>
+                        <div class="price-row"><span>75 грн</span> <button onclick="selectForOrder('Брауні', 75)">Обрати</button></div></div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500" alt="Еклер">
+                        <div class="item-info"><h3>Еклер Ванільний</h3><p>Класичний французький десерт.</p>
+                        <div class="price-row"><span>55 грн</span> <button onclick="selectForOrder('Еклер', 55)">Обрати</button></div></div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500" alt="Капкейк">
+                        <div class="item-info"><h3>Капкейк</h3><p>Чорничний капкейк з кремом.</p>
+                        <div class="price-row"><span>60 грн</span> <button onclick="selectForOrder('Капкейк', 60)">Обрати</button></div></div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=500" alt="Макаруни">
+                        <div class="item-info"><h3>Макаруни</h3><p>Набір з 3-х яскравих смаків.</p>
+                        <div class="price-row"><span>95 грн</span> <button onclick="selectForOrder('Макаруни', 95)">Обрати</button></div></div>
+                    </div>
+                </div>
+            </div>
+
+           <div id="breakfasts" class="menu-category">
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="images/Сирники.jpg" alt="Сирники">
+            <div class="item-info">
+                <h3>Сирники</h3>
+                <p>Ніжні домашні сирники зі сметаною.</p>
+                <div class="price-row"><span>130 грн</span> <button onclick="selectForOrder('Сирники', 130)">Обрати</button></div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1510693206972-df098062cb71?w=500" alt="Омлет">
+            <div class="item-info">
+                <h3>Французький омлет</h3>
+                <p>Пухкий омлет з міксом салатів та тостами.</p>
+                <div class="price-row"><span>140 грн</span> <button onclick="selectForOrder('Омлет', 140)">Обрати</button></div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500" alt="Авокадо тост">
+            <div class="item-info">
+                <h3>Авокадо тост</h3>
+                <p>З яйцем пашот на цільнозерновому хлібі.</p>
+                <div class="price-row"><span>165 грн</span> <button onclick="selectForOrder('Авокадо тост', 165)">Обрати</button></div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/Вівсянка.jpg" alt="Сирники">
+            <div class="item-info">
+                <h3>Вівсянка з фруктами</h3>
+                <p>Корисний сніданок з медом та горіхами.</p>
+                <div class="price-row"><span>95 грн</span> <button onclick="selectForOrder('Вівсянка', 95)">Обрати</button></div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=500" alt="Панкейки">
+            <div class="item-info">
+                <h3>Панкейки</h3>
+                <p>Американські млинці з кленовим сиропом.</p>
+                <div class="price-row"><span>115 грн</span> <button onclick="selectForOrder('Панкейки', 115)">Обрати</button></div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Боул">
+            <div class="item-info">
+                <h3>Сніданок Боул</h3>
+                <p>Кіноа, авокадо, яйце та свіжі овочі.</p>
+                <div class="price-row"><span>180 грн</span> <button onclick="selectForOrder('Боул', 180)">Обрати</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <section id="reviews">
+        <div class="container">
+            <h2>Відгуки наших гостей</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Найкраща атмосфера в місті! Капучино просто ідеальний."</p>
+                    <h4>— Олена Р.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p>"Дуже люблю їхні сирники. Рекомендую всім!"</p>
+                    <h4>— Ігор В.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Затишне місце з чудовою кавою."</p>
+                    <h4>— Марина К.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="container">
+            <h2>Наша локація</h2>
+            <div class="location-content">
+                <div class="location-details">
+                    <p><i class="fas fa-map-marker-alt"></i> Вул. Морська, 12, м. Одеса</p>
+                    <p><i class="fas fa-clock"></i> Пн-Нд: 08:00 — 21:00</p>
+                    <a href="https://maps.google.com" target="_blank" class="map-link">Відкрити в Google Maps</a>
+                </div>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.163354922378!2d30.7423531765!3d46.46580977110!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6317765660893%3A0xc391038b348d57d5!2z0YPQuy4g0JzQvtGA0YHQutCw0Y8sIDEyLCDQntC00LXRgdGB0LAsINCe0LTQtdGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDY1MDAw!5e0!3m2!1sru!2sua!4v1703350000000!5m2!1sru!2sua" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <div class="container">
+            <h2>Замовити онлайн</h2>
+            <div class="order-form-container">
+                <form id="orderForm">
+                    <input type="text" id="order-item" placeholder="Оберіть товар у меню" readonly required>
+                    <input type="text" id="order-price" placeholder="Ціна" readonly>
+                    <input type="text" id="user-name" placeholder="Ваше ім'я" required>
+                    <input type="tel" id="user-phone" placeholder="Ваш телефон (+380...)" required>
+                    <button type="submit" class="cta-button">Підтвердити замовлення</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Кав'ярня "Блакитна Хвиля". Всі права захищені.</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
